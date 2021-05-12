@@ -1,0 +1,9 @@
+{
+  "name": "@spot/takehome-fullstack",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+  },
+  "dependencies": {
+  }
+}
