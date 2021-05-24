@@ -1,13 +1,23 @@
 import React from "react";
-import '../App.css';
+import "../App.css";
+import { useQuery } from "@apollo/react-hooks";
+import { gql } from "apollo-boost";
 
-export function Circle() {
-  const fn = () => {};
 
+const GET_USERS = gql`
+  query {
+    users {
+      userId
+      status
+    }
+  }
+`;
+
+export function Circle(userInfo) {
   return (
     <div>
-        <h2>Client #</h2>
-        <p>Status</p>
+      <h2>Client {userInfo.user.userId}</h2>
+      <p>{userInfo.user.status}</p>
     </div>
   );
 }
